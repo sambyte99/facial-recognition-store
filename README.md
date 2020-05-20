@@ -15,3 +15,17 @@ April 8th Update :https://youtu.be/5NFbRH-eCmY
 and also we have a website hosted and the 
 
 link for that is here :https://raghavendra-stores.firebaseapp.com/
+
+Ah. Maybe you want to run this project right?
+
+It would be rude of me not to give the prerequisites:
+
+Python 3.5 or higher. This was done using 3.7 (I mentioned the previous version in case you are a time traveller)
+OpenCV (python--contrib version)
+PIL
+Firebase-python
+
+Mostly it wont work. Feel free to complain in the issue section. :)
+Happy Copying >w<
+
+
