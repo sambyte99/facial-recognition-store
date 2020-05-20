@@ -16,7 +16,23 @@ def main ():
 
 # For each person, enter one numeric face id
     user={}
-    face_id = input('\n Enter user id end press <return> ==>  ')
+    exists=[]
+    #face_id = input('\n Enter user id end press <return> ==>  ')
+    firebase = firebase.FirebaseApplication('https://pythondbtest-31f38.firebaseio.com/', None)
+    result = firebase.get('pythondbtest-31f38/Customer', '')
+    for y,z in result.items():
+        exist= z["Cust_id"]
+        exists.append(int(exist))
+    print("Existing customer Ids are :", exists)
+    for i in range(1, 10):
+        if i not in exists:
+            face_id=i
+            break
+    print("You have been assigned customer id :",face_id)
+    print("Please remember it for further transactions")
+    print("--------------------------------------------")
+    time.sleep(6)
+
     ide=face_id
     name = input('Please give me your name :')
     phone= input('I would also like your phone number please:')
@@ -74,9 +90,10 @@ def main ():
     user["Name"]=name
     user["Phone"]=phone
     user["Amount"]=amt
-    user["Cust_id"]=ide
-    firebase = firebase.FirebaseApplication('https://pythondbtest-31f38.firebaseio.com/', None)
+    user["Cust_id"]=str(ide)
+    
     result = firebase.post('pythondbtest-31f38/Customer/',user)
     print(result)
     train.main()
     print("\nAlways remember! Your customer id is :",ide)
+
