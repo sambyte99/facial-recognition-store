@@ -12,9 +12,7 @@ and also
 
 April 8th Update :https://youtu.be/5NFbRH-eCmY 
 
-and also we have a website hosted and the 
-
-link for that is here :https://raghavendra-stores.firebaseapp.com/
+And also we have a website hosted and the link for that is here :https://raghavendra-stores.firebaseapp.com/
 
 Ah. Maybe you want to run this project right?
 
